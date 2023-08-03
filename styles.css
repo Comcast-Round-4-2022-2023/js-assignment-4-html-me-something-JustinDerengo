@@ -1,1 +1,25 @@
-/* Write your CSS here! */
+#mainHeading {
+    color: red;
+}
+
+.funParagraph {
+    color:green;
+}
+
+#secretZone {
+    background-color: green;
+}
+
+body {
+    margin: 8px;
+    display: block;
+    text-align: center;
+}
+
+main {
+    background-color: burlywood;
+}
+
+#secretMessage {
+    color: white;
+}
