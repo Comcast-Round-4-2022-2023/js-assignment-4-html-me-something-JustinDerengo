@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html>
    <head>
+      <title>Assignment 4</title>
+      <link rel="stylesheet" type="text/css" href="styles.css">
    </head>
    <body>
       <!-- Write your HTML in this file! -->
       <header>
-         <h1>Getting into Table Top Role Playing Games</h1>
+         <h1 id="mainHeading">Getting into Table Top Role Playing Games</h1>
       </header>
       <main>
          <article>
@@ -27,6 +29,7 @@
                </p>
             </section>
             <section>
+               <div id="secretZone">
                <h2>D&D, Often the Standard</h2>
                
                <p>Dungeons and Dragons has been around since the 70's, and after 50+ years and 5 different itterations has become the most well known TTRPG on the market, even spawning its own video games and movies. What makes it a decent start, is that it has a really good rule structure already in place for new players, and makes for a really good battle simulator so it's easy to digest your role. It also allows for variations on the rules to be easily implemented by more experienced players, and since it's got one of the largest player bases its fairly easy to find other people to play with.
@@ -35,6 +38,10 @@
                   <img src="pictures/dnd-pm-800x1200-c.jpg" id="D&D" alt="Dungeons and Dragons movie poster" width="auto" height="500px" />
                   <figcaption>&copy; 2023 Paramount Studios</figcaption>
                </figure>
+               <p id="testP" class="funParagraph" >
+                  Congratulations, you found a secret message!
+               </p>
+               </div>
             </section>
             <section>
                <h2>Other TTRPG's</h2>
@@ -55,8 +62,24 @@
       </main>
       <footer>
          <p>
-            No secret messege here...
-         </p>
+            No secret messege here... -> <span id="secretMessage">Highlight under the D&D poster</span>
       </footer>
+      <script>
+         let secretMessage = document.getElementById("secretMessage");
+         secretMessage.addEventListener("mouseover", function (event) {
+            secretMessage.style.color = "black";
+         })
+         secretMessage.addEventListener("mouseout", function (event) {
+            secretMessage.style.color = "white";
+         })
+
+         let testP = document.getElementById("testP");
+         testP.addEventListener("mouseover", function (event) {
+            testP.style.color = "black";
+         })
+         testP.addEventListener("mouseout", function (event) {
+            testP.style.color = "green";
+         })
+      </script>
    </body>
 </html>
